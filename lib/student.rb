@@ -47,4 +47,12 @@ class Student
     student.save
     student
   end
+
+  def self.new_from_db(row_array)
+    student = self.new
+    student.id = row_array[0]
+    student.name = row_array[1]
+    student.grade = row_array[2]
+    student
+  end
 end
